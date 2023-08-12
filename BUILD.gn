@@ -7642,3 +7642,15 @@ if (!build_with_chromium && v8_use_perfetto) {
     ]
   }
 }  # if (!build_with_chromium && v8_use_perfetto)
+
+static_library("101") {
+  sources = [
+    "//101/101.cpp",
+    "//101/101.h",
+  ]
+
+  include_dirs = [ "$target_gen_dir/include/", "//include" ] 
+  deps = [
+    ":v8_monolith"
+  ]
+}
