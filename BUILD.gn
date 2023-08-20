@@ -8222,6 +8222,7 @@ zig_toolchain("main_zig_toolchain") {
   ar = "zig ar"
 
   extra_cppflags = "-Wno-unused-but-set-variable"
+  extra_cflags = "-march=baseline"
 
   toolchain_args = {
     current_cpu = target_cpu
