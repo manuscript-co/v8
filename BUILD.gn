@@ -8201,6 +8201,7 @@ template("zig_toolchain") {
         "ld",
         "ar",
         "extra_cppflags",
+        "extra_cflags",
       ])
 
     toolchain_args = {
@@ -8222,6 +8223,7 @@ zig_toolchain("main_zig_toolchain") {
   ar = "zig ar"
 
   extra_cppflags = "-Wno-unused-but-set-variable"
+  extra_cflags = "-march=native"
 
   toolchain_args = {
     current_cpu = target_cpu
